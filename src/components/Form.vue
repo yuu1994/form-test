@@ -25,7 +25,7 @@
 
     <div class="">
       <label>Skills:</label>
-      <input type="text" @keyup.alt="AddSkill" v-model="skill" />
+      <input type="text" @keyup.alt="addSkill" v-model="skill" />
     </div>
     <div class="skill" v-for="skill in skills" :key="skill">
       <p>
@@ -96,7 +96,7 @@ export default {
     };
   },
   methods: {
-    AddSkill(e) {
+    addSkill(e) {
       if (e.key == ",") {
         this.skills.push(this.skill);
         this.skill = "";
